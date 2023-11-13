@@ -23,8 +23,6 @@ app.use(requestLoogger)
 let user = [
   
  ]
-
-
  // Database 
 app.get('/api/user', (request,response) => {
      Model.find({}).then(result => {
@@ -71,9 +69,6 @@ app.put('/api/user/:id', (request,response) => {
 
 
 /*
-
-
-
 app.get('/', (request,response) => {
      response.end('<h1>Backend Contact </h1>')
 })
@@ -114,11 +109,10 @@ app.post('/api/user', (request, response) => {
      response.json(users)
 })*/
 
-
 app.use(unkownEndPoint)
 
 //Our PORT
-const PORT= process.env.PORT || 3002
+const PORT= process.env.PORT || 3003
 app.listen(PORT, () => {
     console.log(`Server running on PORT ${PORT}`)
 })
