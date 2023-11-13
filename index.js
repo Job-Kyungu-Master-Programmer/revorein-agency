@@ -1,11 +1,11 @@
 require('dotenv').config()
 const express = require('express')
 const app = express()
-// const cors = require('cors')
+const cors = require('cors')
 const Model = require('./model/Model')
 // MiddleWare 
 app.use(cors())
-// app.use(express.static('build'))
+app.use(express.static('build'))
 app.use(express.json())
 
 const requestLoogger = ( request, response, next ) => {
@@ -24,7 +24,6 @@ let user = [
   
  ]
 
- /*
 
  // Database 
 app.get('/api/user', (request,response) => {
@@ -69,7 +68,9 @@ app.put('/api/user/:id', (request,response) => {
           response.json(result)
      })
 })
-*/
+
+
+/*
 
 
 
@@ -111,7 +112,8 @@ app.post('/api/user', (request, response) => {
 
      user = user.concat(users)
      response.json(users)
-})
+})*/
+
 
 app.use(unkownEndPoint)
 
