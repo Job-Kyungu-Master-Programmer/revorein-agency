@@ -12,7 +12,7 @@ mongoose.connect(url).then(result => {
 //Schema 
 const userSchema = new mongoose.Schema({
     nameContact : String,
-    phoneContact: Number,
+    phoneContact: String,
     important: Boolean
 })
 //Deleting __id or __iv
